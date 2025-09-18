@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:memobile/screens/home_screen.dart';
 import 'package:memobile/screens/login_screen.dart';
+import 'package:memobile/screens/my_reservations_screen.dart';
+import 'package:memobile/screens/register_user_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +44,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => const LoginScreen(),
-        '/home': (context) => HomeScreen()
+        '/home': (context) => HomeScreen(),
+        '/reservations' : (context) => const MyReservationsScreen(),
+        '/register' : (context) => const RegisterUserScreen()
       },
     );
   }
