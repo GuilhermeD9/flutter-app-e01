@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:memobile/models/moto_model.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
-  final List<Moto> motosDisponiveis = [
+  final List<Moto> motosDisponiveis = const [
     Moto(id: '1', modelo: 'CB 300F Twister', marca: 'Honda', ano: 2025, precoDiaria: 85.00, imageUrl: 'assets/images/cb300f.jpeg'),
     Moto(id: '2', modelo: 'FZ25', marca: 'Yamaha', ano: 2024, precoDiaria: 80.00, imageUrl: 'assets/images/fz25.jpeg'),
     Moto(id: '3', modelo: 'Intruder 125', marca: 'Suzuki', ano: 2012, precoDiaria: 22.00, imageUrl: 'assets/images/intruder125.jpeg'),
