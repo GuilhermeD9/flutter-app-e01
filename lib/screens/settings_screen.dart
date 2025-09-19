@@ -34,8 +34,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             title: const Text('Cadastrar Novo Veículo'),
             subtitle: const Text('Adicione uma nova moto ao catálogo'),
             onTap: () {
-              Navigator.pushNamed(context, '/#');
-              print('Falta implementar');
+              Navigator.pushNamed(context, '/register-vehicle');
             },
           ),
           const Divider(),

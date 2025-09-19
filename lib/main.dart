@@ -3,6 +3,8 @@ import 'package:memobile/screens/edit_profile_screen.dart';
 import 'package:memobile/screens/login_screen.dart';
 import 'package:memobile/screens/main_screen.dart';
 import 'package:memobile/screens/register_user_screen.dart';
+import 'package:memobile/screens/register_vehicle_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -46,6 +48,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/home': (context) => const MainScreen(),
         '/register' : (context) => const RegisterUserScreen(),
+        '/register-vehicle': (context) => const RegisterVehicleScreen(),
         '/edit-profile' : (context) => const EditProfileScreen()
       },
     );
