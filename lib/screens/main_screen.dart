@@ -26,6 +26,18 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('AlugaMe'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.person_outline),
+              onPressed: () {
+                Navigator.pushNamed(context, '/edit-profile');
+              },
+            tooltip: 'Editar Perfil',
+          )
+        ],
+      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
