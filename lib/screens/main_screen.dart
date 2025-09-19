@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:memobile/screens/my_reservations_screen.dart';
 import 'package:memobile/screens/home_screen.dart';
+import 'package:memobile/screens/settings_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,6 +16,13 @@ class _MainScreenState extends State<MainScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     MyReservationsScreen(),
+    SettingsScreen(),
+  ];
+
+  static const List<String> _widgetTitles = <String> [
+    'Motos Disponíveis',
+    'Minhas Reservas',
+    'Configurações',
   ];
 
   void _onItemTapped(int index) {
@@ -26,18 +34,6 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AlugaMe'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.person_outline),
-              onPressed: () {
-                Navigator.pushNamed(context, '/edit-profile');
-              },
-            tooltip: 'Editar Perfil',
-          )
-        ],
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -50,6 +46,10 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
               icon: Icon(Icons.history),
               label: 'Minhas Reservas',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Configurações'
           ),
         ],
         currentIndex: _selectedIndex,
