@@ -39,6 +39,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           const Divider(),
 
+          ListTile(
+            leading: const Icon(Icons.location_on_outlined),
+            title: const Text('Nossas Unidades'),
+            subtitle: const Text('Encontre a loja mais próxima'),
+            onTap: () {
+              Navigator.pushNamed(context, '/unity-map');
+            },
+          ),
+          const Divider(),
+
           SwitchListTile(
             title: const Text('Receber notificações'),
             value: _notificationsEnabled,
