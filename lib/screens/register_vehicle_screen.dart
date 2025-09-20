@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegisterVehicleScreen extends StatefulWidget {
@@ -28,7 +27,7 @@ class _RegisterVehicleScreenState extends State<RegisterVehicleScreen> {
             children: [
               TextFormField(
                 controller: _nameController,
-                decoration: const InputDecoration(labelText: 'Nome do Veículo'),
+                decoration: const InputDecoration(labelText: 'Nome do Veículo', border: OutlineInputBorder()),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Informe o nome do veículo';
@@ -36,9 +35,11 @@ class _RegisterVehicleScreenState extends State<RegisterVehicleScreen> {
                   return null;
                 },
               ),
+              const SizedBox(height: 16),
+
               TextFormField(
                 controller: _plateController,
-                decoration: const InputDecoration(labelText: 'Placa'),
+                decoration: const InputDecoration(labelText: 'Placa', border: OutlineInputBorder()),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Informe a placa';
@@ -46,9 +47,11 @@ class _RegisterVehicleScreenState extends State<RegisterVehicleScreen> {
                   return null;
                 },
               ),
+              const SizedBox(height: 16),
+
               TextFormField(
                 controller: _modelController,
-                decoration: const InputDecoration(labelText: 'Modelo'),
+                decoration: const InputDecoration(labelText: 'Modelo', border: OutlineInputBorder()),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Informe o modelo';
@@ -57,13 +60,14 @@ class _RegisterVehicleScreenState extends State<RegisterVehicleScreen> {
                 },
               ),
               const SizedBox(height: 24),
+
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    // Aqui você pode salvar no banco de dados ou API
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Veículo cadastrado!')),
                     );
+                    Navigator.pop(context);
                   }
                 },
                 child: const Text('Cadastrar'),
