@@ -3,6 +3,7 @@ import 'package:memobile/screens/edit_profile_screen.dart';
 import 'package:memobile/screens/login_screen.dart';
 import 'package:memobile/screens/forgot_password_screen.dart';
 import 'package:memobile/screens/main_screen.dart';
+import 'package:memobile/screens/moto_details_screen.dart';
 import 'package:memobile/screens/map_screen.dart';
 import 'package:memobile/screens/register_user_screen.dart';
 import 'package:memobile/screens/register_vehicle_screen.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/forgot-password': (context) => const ForgotPasswordScreen(),
         '/home': (context) => const MainScreen(),
+        '/moto-details': (context) => const MotoDetailsScreen(),
         '/register' : (context) => const RegisterUserScreen(),
         '/register-vehicle': (context) => const RegisterVehicleScreen(),
         '/edit-profile' : (context) => const EditProfileScreen(),

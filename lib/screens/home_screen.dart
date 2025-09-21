@@ -54,13 +54,11 @@ class HomeScreen extends StatelessWidget {
                   style: const TextStyle(fontSize: 18, color: Colors.green, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
-                
+
                 Align(
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Reserva de ${moto.modelo} iniciada!')),
-                    );
+                    Navigator.pushNamed(context, '/moto-details', arguments: moto,);
                   },
                     child: const Text('Reservar'),
                   ),
