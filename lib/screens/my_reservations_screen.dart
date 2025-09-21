@@ -6,7 +6,7 @@ class MyReservationsScreen extends StatelessWidget {
   const MyReservationsScreen({super.key});
   
   final List<Moto> motosReservadas = const [
-    Moto(id: '1', modelo: 'FZ25', marca: 'Yamaha', ano: 2024, precoDiaria: 80.00, imageUrl: 'assets/images/fz25.jpeg')
+    Moto(id: '1', modelo: 'FZ25', marca: 'Yamaha', descricao: 'Uma moto robusta e ágil, equipada com motor de 250 cilindradas, ótima para uso urbano e estradas curtas, equilibrando conforto e esportividade.', ano: 2024, precoDiaria: 80.00, imageUrl: 'assets/images/fz25.jpeg')
   ];
 
   @override

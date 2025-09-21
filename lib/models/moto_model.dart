@@ -2,6 +2,7 @@ class Moto {
   final String id;
   final String modelo;
   final String marca;
+  final String descricao;
   final int ano;
   final double precoDiaria;
   final String imageUrl;
@@ -11,6 +12,7 @@ class Moto {
   required this.id,
   required this.modelo,
   required this.marca,
+  required this.descricao,
   required this.ano,
   required this.precoDiaria,
   required this.imageUrl,
