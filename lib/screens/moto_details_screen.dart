@@ -6,7 +6,6 @@ class MotoDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Recupera a moto passada via argumentos
     final moto = ModalRoute.of(context)!.settings.arguments as Moto;
 
     return Scaffold(
