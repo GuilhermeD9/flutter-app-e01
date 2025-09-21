@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:memobile/screens/edit_profile_screen.dart';
 import 'package:memobile/screens/login_screen.dart';
+import 'package:memobile/screens/forgot_password_screen.dart';
 import 'package:memobile/screens/main_screen.dart';
 import 'package:memobile/screens/map_screen.dart';
 import 'package:memobile/screens/register_user_screen.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => const LoginScreen(),
+        '/forgot-password': (context) => const ForgotPasswordScreen(),
         '/home': (context) => const MainScreen(),
         '/register' : (context) => const RegisterUserScreen(),
         '/register-vehicle': (context) => const RegisterVehicleScreen(),
