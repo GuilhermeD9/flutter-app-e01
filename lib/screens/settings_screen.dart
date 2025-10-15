@@ -74,6 +74,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const Divider(),
 
           ListTile(
+            leading: const Icon(Icons.people_outline),
+            title: const Text('Sobre a equipe'),
+            subtitle: const Text('Conheça os criadores do projeto'),
+            onTap: () {
+              Navigator.pushNamed(context, '/about-crew');
+            },
+          ),
+          const Divider(),
+
+          ListTile(
             leading: Icon(Icons.logout, color: Colors.red[700]),
             title: Text('Sair', style: TextStyle(color: Colors.red[700])),
             onTap: () {

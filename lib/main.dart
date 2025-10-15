@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memobile/screens/about_crew_screen.dart';
 import 'package:memobile/screens/edit_profile_screen.dart';
 import 'package:memobile/screens/login_screen.dart';
 import 'package:memobile/screens/forgot_password_screen.dart';
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
         '/register' : (context) => const RegisterUserScreen(),
         '/register-vehicle': (context) => const RegisterVehicleScreen(),
         '/edit-profile' : (context) => const EditProfileScreen(),
-        '/unity-map' : (context) => const MapScreen()
+        '/unity-map' : (context) => const MapScreen(),
+        '/about-crew' : (context) => const AboutCrewScreen()
       },
     );
   }
