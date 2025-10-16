@@ -9,7 +9,7 @@ import 'package:memobile/screens/map_screen.dart';
 import 'package:memobile/screens/register_user_screen.dart';
 import 'package:memobile/screens/register_vehicle_screen.dart';
 import 'package:memobile/screens/about_app_screen.dart';
-
+import 'package:memobile/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,8 +48,9 @@ class MyApp extends StatelessWidget {
         )
       ),
 
-      initialRoute: '/login',
+      initialRoute: '/splash',
       routes: {
+        '/splash': (context) => const SplashScreen(),
         '/login': (context) => const LoginScreen(),
         '/forgot-password': (context) => const ForgotPasswordScreen(),
         '/home': (context) => const MainScreen(),
