@@ -84,6 +84,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const Divider(),
 
           ListTile(
+            leading: const Icon(Icons.info_outline),
+            title: const Text('Sobre o App'),
+            subtitle: const Text('Saiba mais sobre o AlugaMe e como ele funciona'),
+            onTap: () {
+              Navigator.pushNamed(context, '/about-app');
+            },
+          ),
+          const Divider(),
+
+          ListTile(
             leading: Icon(Icons.logout, color: Colors.red[700]),
             title: Text('Sair', style: TextStyle(color: Colors.red[700])),
             onTap: () {

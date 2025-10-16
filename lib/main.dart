@@ -8,6 +8,7 @@ import 'package:memobile/screens/moto_details_screen.dart';
 import 'package:memobile/screens/map_screen.dart';
 import 'package:memobile/screens/register_user_screen.dart';
 import 'package:memobile/screens/register_vehicle_screen.dart';
+import 'package:memobile/screens/about_app_screen.dart';
 
 
 void main() {
@@ -57,7 +58,8 @@ class MyApp extends StatelessWidget {
         '/register-vehicle': (context) => const RegisterVehicleScreen(),
         '/edit-profile' : (context) => const EditProfileScreen(),
         '/unity-map' : (context) => const MapScreen(),
-        '/about-crew' : (context) => const AboutCrewScreen()
+        '/about-crew' : (context) => const AboutCrewScreen(),
+        '/about-app': (context) => const AboutAppScreen(),
       },
     );
   }
