@@ -1,44 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:memobile/models/membro_equipe_model.dart';
+import 'package:memobile/screens/membro_detalhes_screen.dart';
 
 class AboutCrewScreen extends StatelessWidget {
   const AboutCrewScreen({super.key});
 
   final List<MembroEquipe> equipe = const [
     MembroEquipe(
-        nome: 'Austin Farias',
-        cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - Período 5',
-        contribuicao: 'Organização da documentação da aplicação',
-        bio: 'Raspa a bundinha nas curvinhas.',
-        fotoUrl: 'assets/images/avatarGeneric.jpeg'
+      nome: 'Austin Farias',
+      cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - 5º Período',
+      contribuicao: 'Responsável pela organização e estruturação da documentação do projeto, garantindo clareza e padronização técnica.',
+      bio: 'Apaixonado por tecnologia e metodologias ágeis, Austin atua com foco em qualidade e documentação de software.',
+      fotoUrl: 'assets/images/avatarGeneric.jpeg',
     ),
     MembroEquipe(
-        nome: 'Antony Rafael',
-        cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - Período 5',
-        contribuicao: 'Desenvolvimento do App',
-        bio: 'Motoqueiro maloquero.',
-        fotoUrl: 'assets/images/avatarGeneric.jpeg'
+      nome: 'Antony Rafael',
+      cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - 5º Período',
+      contribuicao: 'Desenvolvimento da aplicação mobile em Flutter, com foco em usabilidade e organização.',
+      bio: 'Desenvolvedor criativo, interessado em design de interfaces e boas práticas de experiência do usuário (UX/UI).',
+      fotoUrl: 'assets/images/avatarGeneric.jpeg',
     ),
     MembroEquipe(
-        nome: 'Guilherme Silva',
-        cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - Período 5',
-        contribuicao: 'Desenvolvimento do App',
-        bio: 'Filho do braia.',
-        fotoUrl: 'assets/images/avatarGeneric.jpeg'
+      nome: 'Guilherme Silva',
+      cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - 5º Período',
+      contribuicao: 'Atuou no desenvolvimento das telas e componentes do app, contribuindo com o design e navegação do usuário.',
+      bio: 'Entusiasta de desenvolvimento mobile e backend, Antony busca soluções práticas e eficientes em seus projetos.',
+      fotoUrl: 'assets/images/avatarGeneric.jpeg',
     ),
     MembroEquipe(
-        nome: 'Matheus Souza',
-        cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - Período 5',
-        contribuicao: 'Organização da documentação da aplicação',
-        bio: 'Refletor de luz.',
-        fotoUrl: 'assets/images/avatarGeneric.jpeg'
+      nome: 'Matheus Souza',
+      cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - 5º Período',
+      contribuicao: 'Responsável pelo planejamento e organização da documentação técnica e funcional do projeto.',
+      bio: 'Organizado e detalhista, Matheus é dedicado à clareza e consistência nos processos de desenvolvimento.',
+      fotoUrl: 'assets/images/avatarGeneric.jpeg',
     ),
     MembroEquipe(
-        nome: 'Marcos Guilherme',
-        cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - Período 5',
-        contribuicao: 'Desenvolvimento do App',
-        bio: 'Esse cara é pai.',
-        fotoUrl: 'assets/images/avatarGeneric.jpeg'
+      nome: 'Marcos Guilherme',
+      cursoPeriodo: 'Análise e Desenvolvimento de Sistemas - 5º Período',
+      contribuicao: 'Atuou no desenvolvimento da aplicação e testes de integração, garantindo estabilidade e performance.',
+      bio: 'Com interesse em automação e infraestrutura, Marcos busca sempre melhorar a eficiência e qualidade dos sistemas.',
+      fotoUrl: 'assets/images/avatarGeneric.jpeg',
     ),
   ];
 
@@ -66,7 +67,12 @@ class AboutCrewScreen extends StatelessWidget {
               subtitle: Text(membro.cursoPeriodo),
 
               onTap: () {
-                  print('Membro cutucado(laele): ${membro.nome}');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                  builder: (context) => MembroDetalhesScreen(membro: membro),
+                  ),
+                );
               }
             ),
           );
