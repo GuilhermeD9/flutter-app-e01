@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memobile/widgets/custom_text_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -59,16 +60,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     key: _formKey,
                     child: Column(
                       children: [
-                        TextFormField(
+                        CustomTextFormField(
                           controller: _emailController,
-                          decoration: const InputDecoration(
-                            labelText: 'E-mail',
-                            prefixIcon: Icon(Icons.email_outlined),
-                            border: OutlineInputBorder(),
-                          ),
+                          labelText: 'E-mail',
+                          prefixIcon: Icons.email_outlined,
                           keyboardType: TextInputType.emailAddress,
                           validator: (email) {
-                            if (email == null || email.isEmpty || !email.contains('@')) {
+                            if (email == null || !email.contains('@')) {
                               return 'Por favor, digite um e-mail válido.';
                             }
                             return null;

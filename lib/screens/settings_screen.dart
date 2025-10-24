@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memobile/widgets/menu_option_tile.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -19,35 +20,30 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       body: ListView(
         children: [
-          ListTile(
-            leading: const Icon(Icons.person_outline),
-            title: const Text('Editar Perfil'),
-            subtitle: const Text('Altere suas informações pessoais'),
+          MenuOptionTile(
+            title: 'Editar Perfil',
+            subtitle: 'Altere suas informações pessoais',
+            icon: Icons.person_outline,
             onTap: () {
               Navigator.pushNamed(context, '/edit-profile');
             },
           ),
-          const Divider(),
-
-          ListTile(
-            leading: const Icon(Icons.motorcycle_outlined),
-            title: const Text('Cadastrar Novo Veículo'),
-            subtitle: const Text('Adicione uma nova moto ao catálogo'),
+          MenuOptionTile(
+            title: 'Cadastrar Novo Veículo',
+            subtitle: 'Adicione uma nova moto ao catálogo',
+            icon: Icons.motorcycle_outlined,
             onTap: () {
               Navigator.pushNamed(context, '/register-vehicle');
             },
           ),
-          const Divider(),
-
-          ListTile(
-            leading: const Icon(Icons.location_on_outlined),
-            title: const Text('Nossas Unidades'),
-            subtitle: const Text('Encontre a loja mais próxima'),
+          MenuOptionTile(
+            title: 'Nossas Unidades',
+            subtitle: 'Encontre a loja mais próxima',
+            icon: Icons.location_on_outlined,
             onTap: () {
               Navigator.pushNamed(context, '/unity-map');
             },
           ),
-          const Divider(),
 
           SwitchListTile(
             title: const Text('Receber notificações'),
@@ -59,39 +55,37 @@ class _SettingsScreenState extends State<SettingsScreen> {
             },
             secondary: const Icon(Icons.notifications_outlined),
           ),
-          const Divider(),
+          const Divider(height: 1, indent: 16, endIndent: 16),
 
           SwitchListTile(
             title: const Text('Modo Escuro'),
-              value: _darkModeEnabled,
-              onChanged: (bool value) {
+            value: _darkModeEnabled,
+            onChanged: (bool value) {
               setState(() {
                 _darkModeEnabled = value;
               });
-              },
+            },
             secondary: const Icon(Icons.dark_mode_outlined),
           ),
-          const Divider(),
+          const Divider(height: 1, indent: 16, endIndent: 16),
 
-          ListTile(
-            leading: const Icon(Icons.people_outline),
-            title: const Text('Sobre a equipe'),
-            subtitle: const Text('Conheça os criadores do projeto'),
+          MenuOptionTile(
+            title: 'Sobre a equipe',
+            subtitle: 'Conheça os criadores do projeto',
+            icon: Icons.people_outline,
             onTap: () {
               Navigator.pushNamed(context, '/about-crew');
             },
           ),
-          const Divider(),
-
-          ListTile(
-            leading: const Icon(Icons.info_outline),
-            title: const Text('Sobre o App'),
-            subtitle: const Text('Saiba mais sobre o AlugaMe e como ele funciona'),
+          MenuOptionTile(
+            title: 'Sobre o App',
+            subtitle: 'Saiba mais sobre o AlugaMe e como ele funciona',
+            icon: Icons.info_outline,
             onTap: () {
               Navigator.pushNamed(context, '/about-app');
             },
           ),
-          const Divider(),
+          const Divider(height: 1, indent: 16, endIndent: 16),
 
           ListTile(
             leading: Icon(Icons.logout, color: Colors.red[700]),
